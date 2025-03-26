@@ -1,16 +1,3 @@
-import streamlit as st
-
-def berechne_immobilienfinanzierung(kaufpreis, eigenkapital, sollzins, tilgungssatz, nebenskosten_prozent):
-    nebenskosten = kaufpreis * (nebenkosten_prozent / 100)
-    gesamtkosten = kaufpreis + nebenskosten
-    kreditsumme = gesamtkosten - eigenkapital
-    annuitaet = kreditsumme * (sollzins + tilgungssatz) / 100
-    monatsrate = annuitaet / 12
-
-    return gesamtkosten, kreditsumme, annuitaet, monatsrate
-
-
-# Streamlit App
 st.title("Immobilienfinanzierungs-Rechner")
 
 st.sidebar.header("Eingaben")
